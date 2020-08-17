@@ -53,6 +53,17 @@ float GameTimer::DeltaTime() const
 	return (float)mDeltaTime;
 }
 
+void GameTimer::Reset()
+{
+	__int64 currTime;
+	QueryPerformanceCounter((LARGE_INTEGER*)&currTime);
+
+	mBaseTime = currTime;
+	mPrevTime = currTime;
+	mStopTime = 0;
+	mStopped = false;
+}
+
 void GameTimer::Start()
 {
 	__int64 startTime;
