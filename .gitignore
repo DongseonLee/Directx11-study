@@ -1,2 +1,14 @@
 
 Directx11/Directx11.VC.VC.opendb
+*.exe
+Directx11/Debug/Directx11.ilk
+Directx11/Debug/Directx11.pdb
+Directx11/Directx11.VC.db
+*.pdb
+*.db
+*.obj
+*.tlog
+*.tlog
+*.tlog
+Directx11/Directx11/Debug/Directx11.tlog/link.write.1.tlog
+*.obj
