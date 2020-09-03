@@ -14,3 +14,14 @@ Directx11/Directx11/Debug/Directx11.tlog/link.write.1.tlog
 *.obj
 *.db
 Directx11/.vs/Directx11/v14/.suo
+*.tlog
+*.obj
+*.pdb
+Directx11/.vs/Directx11/v14/.suo
+*.cso
+*.db
+*.pdb
+*.tlog
+*.pdb
+Directx11/Directx11/Debug/vc140.idb
+*.obj
