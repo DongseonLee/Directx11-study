@@ -22,6 +22,7 @@
     <ClInclude Include="..\Common\d3dApp.h" />
     <ClInclude Include="..\Common\d3dUtil.h" />
     <ClInclude Include="..\Common\d3dx11effect.h" />
+    <ClInclude Include="..\Common\d3dxGlobal.h" />
     <ClInclude Include="..\Common\DDS.h" />
     <ClInclude Include="..\Common\DDSTextureLoader.h" />
     <ClInclude Include="..\Common\DirectXHelpers.h" />
@@ -30,17 +31,31 @@
     <ClInclude Include="..\Common\LoaderHelpers.h" />
     <ClInclude Include="..\Common\pch.h" />
     <ClInclude Include="..\Common\PlatformHelpers.h" />
+    <ClInclude Include="MathHelper.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Documents\새 폴더\d3d11CodeSet1\Chapter 4 Direct3D Initialization\Init Direct3D\Init Direct3D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\Common\DDSTextureLoader.cpp" />
     <ClCompile Include="..\Common\dxerr.cpp" />
     <ClCompile Include="..\Common\GameTimer.cpp" />
+    <ClCompile Include="BoxDemo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="d3dApp.cpp" />
-    <ClCompile Include="Init Direct3D.cpp" />
+    <ClCompile Include="MathHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\Common\Effects11.lib" />
+    <Library Include="..\Common\Effects11.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Library>
     <Library Include="..\Common\Effects11d.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="FX\color.fx">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Effect</ShaderType>
+    </FxCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8E2648EE-992D-4B1D-8045-C17685CB5E50}</ProjectGuid>
@@ -112,13 +127,17 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\82108\Desktop\Directx11\Directx11-study\Directx11\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\82108\Desktop\Directx11\Directx11-study\Directx11\Common;C:\Users\82108\Desktop\Directx11\Directx11-study\Directx11\Directx11\FX;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\82108\Desktop\Directx11\Directx11-study\Directx11\Common;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

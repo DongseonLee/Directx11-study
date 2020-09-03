@@ -16,6 +16,9 @@
     <Filter Include="Common">
       <UniqueIdentifier>{d1aecbb5-e438-4df4-9109-62d2c89bce23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="FX">
+      <UniqueIdentifier>{46c2953f-a830-44c4-9f72-2156f6af883c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Common\d3dApp.h">
@@ -51,6 +54,12 @@
     <ClInclude Include="..\Common\PlatformHelpers.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="MathHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\d3dxGlobal.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Common\DDSTextureLoader.cpp">
@@ -65,16 +74,27 @@
     <ClCompile Include="d3dApp.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="Init Direct3D.cpp">
+    <ClCompile Include="BoxDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MathHelper.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\새 폴더\d3d11CodeSet1\Chapter 4 Direct3D Initialization\Init Direct3D\Init Direct3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\Common\Effects11.lib">
-      <Filter>Common</Filter>
-    </Library>
     <Library Include="..\Common\Effects11d.lib">
       <Filter>Common</Filter>
     </Library>
+    <Library Include="..\Common\Effects11.lib">
+      <Filter>Common</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="FX\color.fx">
+      <Filter>FX</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

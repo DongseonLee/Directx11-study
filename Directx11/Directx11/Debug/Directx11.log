@@ -1,2 +1,12 @@
-﻿  Directx11.vcxproj -> C:\Users\82108\Desktop\Directx11\Directx11-study\Directx11\Debug\Directx11.exe
+﻿FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\82108\Desktop\Directx11\Directx11-study\Directx11\Debug\color.cso
+  MathHelper.cpp
+  d3dApp.cpp
+  GameTimer.cpp
+  dxerr.cpp
+  DDSTextureLoader.cpp
+  Generating Code...
+  BoxDemo.cpp
+  Directx11.vcxproj -> C:\Users\82108\Desktop\Directx11\Directx11-study\Directx11\Debug\Directx11.exe
   Directx11.vcxproj -> C:\Users\82108\Desktop\Directx11\Directx11-study\Directx11\Debug\Directx11.pdb (Full PDB)
