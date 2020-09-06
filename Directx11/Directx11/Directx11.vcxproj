@@ -46,8 +46,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="d3dApp.cpp" />
-    <ClCompile Include="HillsDemo.cpp" />
+    <ClCompile Include="HillsDemo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="MathHelper.cpp" />
+    <ClCompile Include="ShapesDemo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\Common\Effects11.lib">
